@@ -55,7 +55,7 @@
 
   <modules>
     <!-- Core -->
-    <!--<module>docs</module>-->
+    <module>docs</module>
   </modules>
 
   <inceptionYear>2009</inceptionYear>

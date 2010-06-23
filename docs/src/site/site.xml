@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!--
+
+   Copyright 2010 OpenEngSB Division, Vienna University of Technology
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<project name="Yet Another Software Test Environment">
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-stylus-skin</artifactId>
+  </skin>
+
+  <bannerLeft>
+    <name>Yet Another Software Test Environment (YASTE)</name>
+    <src>images/openengsb_small.png</src>
+  </bannerLeft>
+
+  <publishDate position="left" />
+  <version position="left"/>
+
+  <body>
+    <menu name="YASTE">
+      <item href="index.html" name="Welcome" />
+      <item href="about.html" name="What is YASTE?" />
+      <item href="reference/index.html" name="Userguide" />
+      <item href="faq.html" name="FAQ" />
+      <item href="sponsors.html" name="Sponsors" />
+    </menu>
+
+    <menu name="YASTE Usage" >
+      <item href="howto/howto_setup.html" name="Developer setup" />
+      <item href="howto/howto_notify.html" name="Hello World" />
+      <item href="howto/howto_issue.html" name="Issue tracker" />
+      <item href="howto/howto_embedded.html" name="Web configuration" />
+      <item href="howto/howto_cit.html" name="Continuous Integration" />
+    </menu>
+
+    <menu name="Development">
+      <item name="Downloads" href="http://github.com/openengsb/openengsb/downloads" />
+      <item name="Source" href="http://github.com/openengsb/openengsb/" />
+      <item name="Mailing Lists" href="mailinglists.html" />
+      <item name="Presentation Material" href="presentation.html" />
+      <item name="Issues / Roadmap" href="http://issues.openengsb.org/"/>
+      <item name="Continuous Integration" href="http://build.openengsb.org/"/>
+      <item name="Artifacts" href="http://maven.openengsb.org/" />
+      <item name="Development Team" href="team-list.html" />
+    </menu>
+
+  </body>
+
+</project>

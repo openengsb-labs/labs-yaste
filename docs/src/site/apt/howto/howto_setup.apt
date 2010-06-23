@@ -1,0 +1,94 @@
+~~
+~~	Copyright 2010 OpenEngSB Division, Vienna University of Technology
+~~
+~~   Licensed under the Apache License, Version 2.0 (the "License");
+~~   you may not use this file except in compliance with the License.
+~~   You may obtain a copy of the License at
+~~
+~~       http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~   Unless required by applicable law or agreed to in writing, software
+~~   distributed under the License is distributed on an "AS IS" BASIS,
+~~   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+~~   See the License for the specific language governing permissions and
+~~   limitations under the License.
+~~
+HowTo - First steps with OpenEngSB (Setup)
+
+  This section describes the setup process required for OpenEngSB development. If you have been working with Apache 
+ ServiceMix before and got an idea about GIT version control there are not any surprises. You could skip directly to 
+ the {{{howto_notify.html}Hello World}} example.
+
+* Java Development Kit 6
+  
+   First of all the JDK6 should be installed on the system and the JAVA_HOME variable should be set. 
+  ({{{http://java.sun.com/javase/downloads}Java download}})
+
+* eXist
+
+  The logging component is deployed as a standard component with each package provided with the OpenEngSB. But to make
+ it work nevertheless it is required to start exist first. First of all download and install the latest version of eXist
+ as explained {{{http://exist.sourceforge.net/quickstart.html#sect2}here}}. Since exist runs on the default port 8080 
+ which is also used by other configuration utils it have to be set to port 8093. To change the eXist default server port, 
+ open $EXIST_HOME/bin/functions.d/eXist-settings.sh file and find OPTIONS line which should look like:
+
++---- 
+OPTIONS="-Dexist.home=$EXIST_HOME"
++----
+
+  Then alter that line adding new port number at the end:
+
++----
+OPTIONS="-Dexist.home=$EXIST_HOME -Djetty.port=8093"
++----
+
+  Finally startup eXist by using the $EXIST_HOME/bin/startup.[sh||bat] script file.
+  
+* Servicemix 4.2
+
+  Now download Apache Servicemix 4.2 from ({{{http://servicemix.apache.org/servicemix-420.html}ServceMix download}})
+ 
+ Please increase the memory servicemix uses by setting DEFAULT_JAVA_OPTS in the servicemix startup script (bin/servicemix) to the following values:
+
++----
+  -XX:PermSize=256m -XX:MaxPermSize=256m -Xmx1024M 
++---- 
+ 
+ In the servicemix directory please execute the startup script "bin/servicemix".
+ 
+  TBW (additional parameters which have to be set for SMX to run properly).
+
+* Maven 2
+
+  Finally download Apache Maven and unpack it. ({{{http://maven.apache.org/download.html}Maven download}}) Add the path
+ of the maven binary to your PATH variable. Further more you should add a MAVEN_OPTS variable with "-Xmx1024M -XX:MaxPermSize=512m".
+
+* GIT version control
+
+  Furthermore, GIT (or SVN) is required to check out the latest development release from our source base. For GIT we recommend the latest Cygwin with git packages. ({{{http://git-scm.com/download}GIT download}}) Please set at least the following variables.
+
++----
+git config --global user.name "Firstname Secondname"
+git config --global user.email "my@email.com"
+git config --global core.autocrlf input
++----
+
+* Getting OpenEngSB
+
+  Just checkout the openengsb master branch with the following command:
+
++----
+git clone git://github.com/openengsb/openengsb
++----
+
+
+  Set the SMX_HOME and M2_REPO environment variables to point to the servicemix directory and the maven repository. 
+  If ServiceMix is running you can build and deploy the OpenEngSB.
+
++----
+cd openengsb/
+mvn clean install [-Dmaven.test.skip=true]
+cd scripts
+sh deploy.sh
++----
+

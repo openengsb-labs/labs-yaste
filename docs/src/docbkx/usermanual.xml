@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<!--
+
+   Copyright 2010 OpenEngSB Division, Vienna University of Technology
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<book
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    version="5.0">
+
+  <info>
+    <title>Open Engineering Service Bus Documentation</title>
+
+    <releaseinfo>OpenEngSB</releaseinfo>
+    <legalnotice>Copyright &#xA9; 2010</legalnotice>
+
+    <authorgroup>
+      <author>
+        <firstname>Andreas</firstname>
+        <surname>Pieber</surname>
+        <email>andreas.pieber [at] ifs.tuwien.ac.at</email>
+      </author>
+      <author>
+        <firstname>Florian</firstname>
+        <surname>Waltersdorfer</surname>
+        <email>ignatiomobius [at] gmail.com</email>
+      </author>
+      <author>
+        <firstname>Michael</firstname>
+        <surname>Handler</surname>
+        <email>michael.handler [at] fullstop.at</email>
+      </author>
+      <author>
+        <firstname>Christoph</firstname>
+        <surname>Gritschenberger</surname>
+        <email>e0525747 [at] student.tuwien.ac</email>
+      </author>
+      <author>
+        <firstname>Patrick</firstname>
+        <surname>Peer</surname>
+        <email>e0326352 [at] gmail.com</email>
+      </author>
+      <author>
+        <firstname>Christoph</firstname>
+        <surname>Zehetner</surname>
+        <email>christoph.zehetner [at] gmx.at</email>
+      </author>
+      <author>
+        <firstname>Michael</firstname>
+        <surname>Heil</surname>
+        <email>michael.heil [at] chello.at</email>
+      </author>
+    </authorgroup>
+  </info>
+
+  <part>
+    <title>Introduction</title>
+    <partintro>
+      <para>
+        This part gives an introduction into the OpenEngSB project and explains it base usage environment
+        and the base concepts, such as Tool Domains, Tool Connectors, OpenEngSB workflows and similar
+        important ideas.
+      </para>
+    </partintro>
+    <xi:include href="introduction/introduction.xml" />
+  </part>
+
+  <part>
+    <title>Setup &amp; Administration</title>
+    <partintro>
+      <para>
+        This part explains the usage of the OpenEngSB in a real environment. It explains how to install,
+        setup and use the OpenEngSB administration interface to implement a tool environment according
+        to your needs.
+      </para>
+    </partintro>
+    <xi:include href="administration/userQuickstart.xml" />
+    <xi:include href="administration/testclient.xml" />
+  </part>
+
+  <part>
+    <title>Developer Manual</title>
+    <partintro>
+      <para>
+        This part explains how to develop additional OpenEngSB connectors, tools and similar parts. In
+        addition it explains the rules and infrastructure according to which the OpenEngSB project is
+        developed.
+      </para>
+    </partintro>
+    <xi:include href="developer/architecture.xml" />
+    <xi:include href="developer/devQuickstart.xml" />
+    <xi:include href="developer/connectorArchetype.xml"/>
+    <xi:include href="developer/externalConnectors.xml" />
+    <xi:include href="developer/internalConnectors.xml" />
+    <xi:include href="developer/features.xml"/>
+    <xi:include href="developer/workflow.xml"/>
+    <xi:include href="developer/context.xml"/>
+    <xi:include href="developer/guidelines.xml" />
+  </part>
+
+  <part>
+    <title>Domains and Connectors</title>
+    <partintro>
+      <para>
+        This part summarizes and explains the usage of the available OpenEngSB domains and tool connectors.
+      </para>
+    </partintro>
+    <xi:include href="developer/domains.xml"/>
+  </part>
+
+</book>
