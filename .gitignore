@@ -1,0 +1,63 @@
+#=================
+#eclipse-workspace
+#=================
+eclipse-workspace
+
+#=================
+#eclipse-project
+#=================
+*.project
+*.classpath
+*.settings
+*bin
+formatter.xml
+
+#=================
+#maven-files
+#=================
+*target
+
+#================
+#log files
+#================
+*engsb.log*
+
+#================
+#runtime productions
+#================
+*activemq-data
+core/config/ui/data
+engsb-edb-core/dump
+package/embedded/*.log
+package/embedded/data/
+
+#================
+#Mac OS X hidden files/folders
+#================
+.DS_Store
+
+#================
+#WinXP hidden files/folders
+#================
+*Thumbs.db
+
+#================
+#Documentation artifacts
+#================
+*.dia~
+
+#================
+#Assembly artifacts
+#================
+*.zip
+
+#================
+#Easy2Find
+#================
+easy2find
+
+#================
+#pver ignores
+#================
+pconf.pyc
+
