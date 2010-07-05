@@ -22,7 +22,6 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
-
     <root.basedir>${project.basedir}</root.basedir>
 
     <!-- Environment Versions -->
@@ -30,6 +29,7 @@
     <mvn.version>2.1</mvn.version>
 
     <!-- Library Versions -->
+    <junit.version>4.7</junit.version>
 
     <!-- Plugin Version -->
     <docbkx.version>2.0.10</docbkx.version>
@@ -49,6 +49,7 @@
 
   <modules>
     <!-- Core -->
+    <module>core/cli</module>
     <module>docs</module>
   </modules>
 
@@ -334,9 +335,19 @@
     </profile>
   </profiles>
 
-  <!--<dependencyManagement>
+  <dependencyManagement>
 
-  </dependencyManagement>-->
+    <dependencies>
+      <!-- Test Dependencies -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+
+  </dependencyManagement>
 
   <pluginRepositories>
     <pluginRepository>
