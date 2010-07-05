@@ -448,14 +448,14 @@
       </snapshots>
     </repository>
     <repository>
-      <id>releases</id>
+      <id>openengsb-releases</id>
       <name>OpenEngSB Release Repository</name>
-      <url>http://maven.openengsb.org/nexus/content/repositories/releases/</url>
+      <url>http://maven.openengsb.org/nexus/content/repositories/openengsb-releases/</url>
     </repository>
     <repository>
-      <id>snapshots</id>
+      <id>openengsb-snapshots</id>
       <name>OpenEngSB Snapshot Repository</name>
-      <url>http://maven.openengsb.org/nexus/content/repositories/snapshots/</url>
+      <url>http://maven.openengsb.org/nexus/content/repositories/openengsb-snapshots/</url>
     </repository>
     <repository>
       <id>mockns-snapshot</id>
@@ -487,14 +487,14 @@
 
   <distributionManagement>
     <repository>
-      <id>releases</id>
+      <id>openengsb-releases</id>
       <name>OpenEngSB Release Repository</name>
-      <url>dav:http://maven.openengsb.org/nexus/content/repositories/releases/</url>
+      <url>dav:http://maven.openengsb.org/nexus/content/repositories/openengsb-releases/</url>
     </repository>
     <snapshotRepository>
-      <id>snapshots</id>
+      <id>openengsb-snapshots</id>
       <name>OpenEngSB Snapshot Repository</name>
-      <url>dav:http://maven.openengsb.org/nexus/content/repositories/snapshots/</url>
+      <url>dav:http://maven.openengsb.org/nexus/content/repositories/openengsb-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
