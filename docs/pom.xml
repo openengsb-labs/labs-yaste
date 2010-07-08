@@ -22,8 +22,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.openengsb</groupId>
-    <artifactId>openengsb-docs</artifactId>
+    <groupId>org.openengsb.yaste</groupId>
+    <artifactId>yaste-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
   
@@ -32,7 +32,7 @@
   <name>yaste-docs</name>
 
   <description>
-    Documentation project of the Yet Another Software Test Environment Project
+    Documentation of the Yet Another Software Test Environment (YASTE) project.
   </description>
 
   <distributionManagement>

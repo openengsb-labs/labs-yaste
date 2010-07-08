@@ -13,20 +13,23 @@
 ~~   See the License for the specific language governing permissions and
 ~~   limitations under the License.
 ~~
-Welcome to OpenEngSB!
+Welcome to YASTE!
 
-  The Open Engineering Service Bus (OpenEngSB) project provides an easy-to-use
-  platform for engineering tool integration. It offers domain-based workflow
-  design for reoccurring integration tasks, freeing an engineer's time for 
-  creative work.
+  The Yet Another Software Test Environment (YASTE) project provides a frontend to
+  existing tools for automated creation (based on Vagrant) and provisioning/configuration 
+  management (based on Chef) of virtual machines using Oracle's Virtualbox, as well as a 
+  set of tools for running system/acceptance tests.
+  
+  YASTE is primarily intended to be used with the Open Engineering Service Bus (OpenEngSB)
+  project, but can be used for system testing of virtually any kind of Software.
   
   Interested? Read on ... or directly join the community!
 
-OpenEngSB Community
+YASTE Community
 
-* About OpenEngSB
+* About YASTE
 
-  * {{{about.html}What is OpenEngSB?}}
+  * {{{about.html}What is YASTE?}}
   
   * {{{presentation.html}Presentations}}
   
@@ -34,22 +37,16 @@ OpenEngSB Community
 
   * {{{reference/index.html}Userguide}}
   
-  * {{{http://groups.google.com/group/openengsb-announce}openengsb-announce}} (release announcements)
+  * {{{http://groups.google.com/group/yaste-user}yaste-user}} (user group and support Mailing list)
   
-  * {{{http://groups.google.com/group/openengsb-user}openengsb-user}} (user group and support)
-  
-  * {{{http://groups.google.com/group/openengsb-dev}openengsb-dev}} (developer discussion)
+  * {{{http://groups.google.com/group/yaste-dev}yaste-dev}} (developer discussion Mailing list)
 
 * Getting involved
   
-  * {{{http://git.openengsb.org/}Source repository}}
+  * {{{http://github.com/openengsb/yaste}Source repository}}
   
-  * {{{http://issues.openengsb.org}Issue tracker}}
+  * {{{http://issues.openengsb.org/jira/browse/YASTE}Issue tracker}}
   
-  * {{{http://build.openengsb.org}Build server}}
+  * {{{http://build.openengsb.org/hudson/job/YASTE}Build server}}
   
-  * {{{http://maven.openengsb.org}Maven repository}}
-  
-  * {{{contribute/mailinglists.html}Mailing lists}}
-  
-  * {{{http://www.facebook.com/group.php?gid=208312030232}OpenEngSB on facebook}}
+~~ * {{{http://maven.openengsb.org}Maven repository}}
