@@ -29,6 +29,8 @@
     <mvn.version>2.1</mvn.version>
 
     <!-- Library Versions -->
+    <cucumber.version>0.8.3</cucumber.version>
+    <jruby.version>1.5.1</jruby.version>
     <junit.version>4.7</junit.version>
 
     <!-- Plugin Version -->
@@ -338,6 +340,12 @@
   <dependencyManagement>
 
     <dependencies>
+      <dependency>
+        <groupId>org.jruby</groupId>
+        <artifactId>jruby-complete</artifactId>
+        <version>${jruby.version}</version>
+      </dependency>
+
       <!-- Test Dependencies -->
       <dependency>
         <groupId>junit</groupId>
