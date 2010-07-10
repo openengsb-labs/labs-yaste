@@ -252,6 +252,9 @@
           <groupId>com.agilejava.docbkx</groupId>
           <artifactId>docbkx-maven-plugin</artifactId>
           <version>${docbkx.version}</version>
+          <configuration>
+          <xincludeSupported>true</xincludeSupported>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.camel</groupId>
