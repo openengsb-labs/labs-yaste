@@ -20,7 +20,7 @@
   <part id="General">
     <title>General</title>
     <faq id="What">
-      <question>What is the OpenEngSB</question>
+      <question>What is YASTE?</question>
       <answer>
         <p>
 	  TBW
@@ -28,7 +28,7 @@
       </answer>
     </faq>
     <faq id="why">
-      <question>Why do we develop the OpenEngSB?</question>
+      <question>Why are we developing YASTE?</question>
       <answer>
         <p>
           TBW
@@ -36,7 +36,7 @@
       </answer>
     </faq>
     <faq id="why">
-      <question>Why is the OpenEngSB developed as a free project?</question>
+      <question>Why is YASTE free software?</question>
       <answer>
         <p>
           TBW
@@ -59,14 +59,6 @@
 	<p>
 	  to your /etc/security/limits.conf file and restart your device.
 	</p>
-      </answer>
-    </faq>
-    <faq id="Debug">
-      <question>Is it possible to debug OpenEngSB while running in servicemix?</question>
-      <answer>
-        <p>
-          Yes, to debug in Eclipse just stick with <a href="http://servicemix.apache.org/remote-debugging-servicemix-in-eclipse.html">http://servicemix.apache.org/remote-debugging-servicemix-in-eclipse.html</a>, but mind that SERVICEMIX_DEBUG has to be replaced with KARAF_DEBUG.
-        </p>
       </answer>
     </faq>
   </part>

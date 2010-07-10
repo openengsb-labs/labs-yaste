@@ -16,10 +16,9 @@
 
 User Documentation
 
-  The usermanual contains descriptions about how to use the OpenEngSB and how to configure it. Further more information
- for starting with the development of connectors and domains are contained. It is thought as well for users who simply
- want to try the OpenEngSB as for developer like to integrate tool connectors. The introduction of the user manual
- should be read by all and provide additional information which chapters are interesting for which target audience.
+ The user manual describes how to configure and use YASTE and also provides information
+ on getting starting with the development of plugins. It is recommended for users who simply
+ want to try YASTE as well as for developers who would like to program and integrate new plugins.
 
     * {{{html/usermanual.html} Multi-HTML page documentation}}
 
