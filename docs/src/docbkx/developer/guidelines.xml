@@ -19,23 +19,12 @@
 <chapter id="guidelines" xmlns="http://docbook.org/ns/docbook">
   <title>Development Guidelines</title>
   <para>
-    This section contains the design, architecture and development guidelines for the OpenEngSB.
+    This section contains the design, architecture and development guidelines for YASTE.
   </para>
   <section id="guidelines.storage">
     <title>Storage Guidelines</title>
     <para>
-      This section describes the guidelines where what have to be stored.
-      <itemizedlist>
-        <listitem>The role of the edb remains unchanged. It not used by endpoints to store their data.</listitem>
-        <listitem>For the context and the upcoming user and accesscontrol management, I'll investigate how LDAP can
-        assist. Though this pulls another big dependency into the project, it should pay off. The best solution would
-        be to deploy the required LDAP-component right into servicemix.</listitem>
-        <listitem>The h2-database that the config-ui is using will be replaced by a solution using eXist.</listitem>
-        <listitem>The exist-util in the core will be extended to provide utility-functions to resolve data-relations.
-        Requirements will be derived from porting the config-ui-database.</listitem>
-        <listitem>To be more flexible on the datamodel, a structured approach (like a relational database) is not a
-        good solution. The semistructered way eXist uses is more desirable considering the current requirements.</listitem>
-      </itemizedlist>
+      TBW
     </para>
   </section>
 </chapter>
