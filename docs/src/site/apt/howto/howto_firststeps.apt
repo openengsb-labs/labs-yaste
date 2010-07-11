@@ -1,5 +1,5 @@
 ~~
-~~  Copyright 2010 OpenEngSB Division, Vienna University of Technology
+~~	Copyright 2010 OpenEngSB Division, Vienna University of Technology
 ~~
 ~~   Licensed under the Apache License, Version 2.0 (the "License");
 ~~   you may not use this file except in compliance with the License.
@@ -13,12 +13,4 @@
 ~~   See the License for the specific language governing permissions and
 ~~   limitations under the License.
 ~~
-Sponsors
-
-  YASTE would not be possible without the open source world and their
-fabulous support. These are the companies supporting our hosting and
-development. Please check them out, they are awesome.
-
-~~  * {{{http://www.zeroturnaround.com/}ZeroTurnaround}} - {{{http://www.zeroturnaround.com/jrebel/}JRebel}} licenses for our developer team.
-
-~~  * {{{http://www.atlassian.com/}Atlassian}} - {{{http://www.atlassian.com/software/jira/}Jira}} licenses for our developer team.
+HowTo - First steps with YASTE

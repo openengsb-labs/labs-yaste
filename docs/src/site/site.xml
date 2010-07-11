@@ -42,10 +42,7 @@
 
     <menu name="YASTE Usage" >
       <item href="howto/howto_setup.html" name="Developer setup" />
-      <item href="howto/howto_notify.html" name="Hello World" />
-      <item href="howto/howto_issue.html" name="Issue tracker" />
-      <item href="howto/howto_embedded.html" name="Web configuration" />
-      <item href="howto/howto_cit.html" name="Continuous Integration" />
+      <item href="howto/howto_firststeps.html" name="First Steps" />
     </menu>
 
     <menu name="Development">
