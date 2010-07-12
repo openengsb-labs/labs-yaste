@@ -39,15 +39,25 @@
    <build>
     <plugins>
       <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
+        <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
           <archive>
             <manifest>
               <mainClass>org.openengsb.yaste.cli.Main</mainClass>
-              <addClasspath>true</addClasspath>
             </manifest>
           </archive>
         </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
