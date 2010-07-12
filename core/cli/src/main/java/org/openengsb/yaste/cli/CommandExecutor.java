@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import org.openengsb.yaste.cli.commands.Command;
 import org.openengsb.yaste.cli.commands.HelpCommand;
+import org.openengsb.yaste.cli.commands.InitCommand;
 
 public class CommandExecutor {
     private Console console;
@@ -43,6 +44,7 @@ public class CommandExecutor {
     private void createCommandList() {
         commands = new ArrayList<Command>();
         commands.add(new HelpCommand());
+        commands.add(new InitCommand());
     }
 
     private Command findMatchingCommand(String request) {

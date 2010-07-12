@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
         CommandExecutor cli = new CommandExecutor();
         cli.setConsole(new CliConsole());
-        cli.setTestProject(new TestProjectImpl(new File(System.getenv("user.dir"))));
+        cli.setTestProject(new TestProjectImpl(new File(System.getProperty("user.dir"))));
         StringBuilder sb = new StringBuilder();
         for (String arg : args) {
             sb.append(arg);
