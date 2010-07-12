@@ -27,7 +27,8 @@ public class Main {
         StringBuilder sb = new StringBuilder();
         for (String arg : args) {
             sb.append(arg);
+            sb.append(' ');
         }
-        cli.execute(sb.toString());
+        cli.execute(sb.toString().trim());
     }
 }
