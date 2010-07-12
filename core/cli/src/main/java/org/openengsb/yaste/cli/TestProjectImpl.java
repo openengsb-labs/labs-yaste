@@ -17,6 +17,33 @@
  */
 package org.openengsb.yaste.cli;
 
-public class TestProjectImpl implements TestProject {
+import java.io.File;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
+
+public class TestProjectImpl implements TestProject {
+    private final File directory;
+
+    public TestProjectImpl(File directory) {
+        this.directory = directory;
+    }
+
+    @Override
+    public boolean doesFileExists(File file) {
+        checkRelativePath(file);
+        return new File(directory, file.getPath()).exists();
+    }
+
+    @Override
+    public void writeFile(File file, String content) throws IOException {
+        checkRelativePath(file);
+        FileUtils.writeStringToFile(new File(directory, file.getPath()), content);
+    }
+
+    private void checkRelativePath(File path) {
+        if (path.isAbsolute()) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

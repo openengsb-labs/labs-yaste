@@ -17,11 +17,13 @@
  */
 package org.openengsb.yaste.cli;
 
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
         CommandExecutor cli = new CommandExecutor();
         cli.setConsole(new CliConsole());
-        cli.setTestProject(new TestProjectImpl());
+        cli.setTestProject(new TestProjectImpl(new File(System.getenv("user.dir"))));
         StringBuilder sb = new StringBuilder();
         for (String arg : args) {
             sb.append(arg);

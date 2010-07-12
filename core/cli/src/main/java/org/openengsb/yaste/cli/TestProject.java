@@ -17,6 +17,22 @@
  */
 package org.openengsb.yaste.cli;
 
-public interface TestProject {
+import java.io.File;
+import java.io.IOException;
 
+public interface TestProject {
+    /**
+     * Returns true if the given file exists in the test directory.
+     *
+     * @throws IllegalArgumentException if the given path is not a relative path
+     */
+    public boolean doesFileExists(File file);
+
+    /**
+     * Writes the given {@code content} to the given file relative to the test
+     * directory. Note, this overwrites an existing file.
+     *
+     * @throws IOException
+     */
+    public void writeFile(File file, String content) throws IOException;
 }
