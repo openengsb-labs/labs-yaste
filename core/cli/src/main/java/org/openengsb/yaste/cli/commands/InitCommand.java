@@ -36,8 +36,14 @@ public class InitCommand extends AbstractCommand {
             console.writeError("A project file does already exist.");
             return;
         }
+        String[] s = request.split("[ ]+");
+        String name = s.length >= 2 ? s[1] : "";
+        if (!name.matches("^[A-Za-z_-]*$")) {
+            console.writeError("Invalid project name");
+            return;
+        }
         try {
-            testProject.writeFile(projectFile, "set_name ''");
+            testProject.writeFile(projectFile, "set_name '" + name + "'");
             console.writeInfo("Created new test project.");
         } catch (IOException e) {
             throw new RuntimeException("Colud not create project file", e);

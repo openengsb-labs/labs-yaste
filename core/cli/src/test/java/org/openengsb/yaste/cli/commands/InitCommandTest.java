@@ -19,6 +19,7 @@ package org.openengsb.yaste.cli.commands;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
+import static org.mockito.Matchers.contains;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -39,5 +40,13 @@ public class InitCommandTest {
         when(testProject.doesFileExists(any(File.class))).thenReturn(false);
         new InitCommand().run("init", testProject, mock(Console.class));
         verify(testProject).writeFile(eq(new File("yaste")), anyString());
+    }
+
+    @Test
+    public void run_withProjectnameArgument_shouldWriteNameToFile() throws IOException {
+        TestProject testProject = mock(TestProject.class);
+        when(testProject.doesFileExists(any(File.class))).thenReturn(false);
+        new InitCommand().run("init test-project", testProject, mock(Console.class));
+        verify(testProject).writeFile(eq(new File("yaste")), contains("set_name 'test-project'"));
     }
 }

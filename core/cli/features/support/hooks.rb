@@ -26,7 +26,7 @@ Around do |scenario, block|
   $cli = CommandExecutor.new
   $console = ConsoleMock.new
   $cli.set_console($console)
-  $cli.set_test_project(TestProjectImpl.new(java.io.File.new($current_dir.to_s))
+  $cli.set_test_project(TestProjectImpl.new(java.io.File.new($current_dir.to_s)))
   block.call
   #FileUtils.rm_r($current_dir)
 end
