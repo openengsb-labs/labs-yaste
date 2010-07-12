@@ -319,6 +319,8 @@
                 <exclude>**/.settings/**</exclude>
                 <exclude>**/.metadata/**</exclude>
 
+                <exclude>**/.codecover/**</exclude>
+
                 <exclude>**/site/docbook/empty.txt</exclude>
 
                 <!-- -? jaxb stuff -? -->
