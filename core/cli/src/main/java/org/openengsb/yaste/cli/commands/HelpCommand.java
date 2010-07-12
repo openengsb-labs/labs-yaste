@@ -20,19 +20,15 @@ package org.openengsb.yaste.cli.commands;
 import org.openengsb.yaste.cli.Console;
 import org.openengsb.yaste.cli.TestProject;
 
-public class HelpCommand implements Command {
+public class HelpCommand extends AbstractCommand {
 
-    @Override
-    public boolean matchesRequest(String request) {
-        return request.equals("help") || request.isEmpty();
+    public HelpCommand() {
+        addName("help");
+        addName("");
     }
 
     @Override
-    public void run(String request, TestProject testProject, Console console) {
-        if (!matchesRequest(request)) {
-            throw new IllegalArgumentException("request does not match command");
-        }
+    public void runCommand(String request, TestProject testProject, Console console) {
         console.writeInfo("USAGE: <command> [argument ...]");
     }
-
 }
