@@ -21,3 +21,13 @@ Feature: Tester creates first test project
   Scenario: no argument to cli
     When I run the cli without any arguments
     Then the help information should be shown
+
+  Scenario: valid project name
+    Given I haven't created a test project
+    When I create a test project "test-project"
+    Then a new project file with the project name "test-project" is created
+
+  Scenario: invalid project name
+    Given I haven't created a test project
+    When I create a test project "/"
+    Then an error message should be shown, saying "Invalid project name"

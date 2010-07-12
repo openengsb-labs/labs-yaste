@@ -21,3 +21,20 @@ end
 Then /^the help information should be shown$/ do
   $console.info[0].should include('USAGE')
 end
+
+Given /^I haven't created a test project$/ do
+end
+
+When /^I create a test project "([^"]*)"$/ do |name|
+  $cli.execute("init #{name}")
+end
+
+Then /^a new project file with the project name "([^"]*)" is created$/ do |name|
+  projectfile = File.new $current_dir.join('yaste')
+  lines = projectfile.readlines.map { |x| x.chomp }
+  lines.should include("set_name '#{name}'")
+end
+
+Then /^an error message should be shown, saying "([^"]*)"$/ do |message|
+  $console.error.should include(message)
+end
