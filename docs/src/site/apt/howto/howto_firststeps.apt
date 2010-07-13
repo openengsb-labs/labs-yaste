@@ -13,14 +13,4 @@
 ~~   See the License for the specific language governing permissions and
 ~~   limitations under the License.
 ~~
-Presentation Material
-
-  This page contains all material which can be used to present
- the OpenEngSB to the public. This includes actual presentation material, logos,
- pictures and so on. The material is provided by supporters of the project and
- can be reused for representing the OpenEngSB.
-
-  If you have created your own material and want to provide it to the community,
-  please contact us by the developer mailing list.
- 
- * {{{presentation/cit.pdf}Presentation about the CI&T Use Case}} - Michael Handler, et al. (Vienna University of Technology)
+HowTo - First steps with YASTE

@@ -19,10 +19,11 @@
 <chapter id="introduction" xmlns="http://docbook.org/ns/docbook">
   <title>Introduction</title>
 
+  TODO: This section has not really been modified from the original OpenEngSB introduction.
   TBW (explain which sections are interesting for which target audience)
 
   <section id="introduction.what">
-    <title>What is an Engineering Service Bus</title>
+    <title>What is YASTE?</title>
     <para>
       TBW
     </para>

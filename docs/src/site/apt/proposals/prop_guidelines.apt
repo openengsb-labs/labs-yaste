@@ -15,12 +15,12 @@
 ~~
 Proposals
 
-  A main directive of OpenEngSB is its continuous extension. Most ideas are discussed
- in the mailinglist first, but at some point a more consistent way of specification is required.
- For the OpenEngSB project this should be done via written proposals in the proposals
- section. This article explains in more details what this means and how it should be handled.
+  A main directive of YASTE is its continuous extension. Most ideas are discussed
+ in the mailinglists first, but at some point a more consistent way of specification is required.
+ For the YASTE project this should be done via written proposals. 
+ This article explains in more details what this means and how it should be handled.
  
-*General
+*General Guidelines
 
   First of all some general information about proposals; Please write them, as everything else
  on this page in English! Further write all proposals in APT and add them to the 
@@ -34,11 +34,9 @@ Proposals
  
  [[1]] Which tools exist for the domain
  
- [[2]] What does these tools can, what is the common sense between these tools
+ [[2]] The purpose of these Tools i.e. common sense interactions between these tools. Preferably illustrated via behavioural UML diagramms (Activity, Sequence, Objectflow, ...).
  
- [[3]] What services are required for the domain to use the services available. This should be done in
-    "the java way of live". Simply define an interface and document it and its data types in most
-    detail.
+ [[3]] What YASTE plugins are required? TODO: osgi
     
  [[4]] Define which events could be thrown by the domain. Define java classes and describe in detail
     when this event should be thrown. 

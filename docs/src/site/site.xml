@@ -25,7 +25,7 @@
 
   <bannerLeft>
     <name>Yet Another Software Test Environment (YASTE)</name>
-    <src>images/openengsb_small.png</src>
+    <src>images/yaste_small.png</src>
   </bannerLeft>
 
   <publishDate position="left" />
@@ -42,21 +42,21 @@
 
     <menu name="YASTE Usage" >
       <item href="howto/howto_setup.html" name="Developer setup" />
-      <item href="howto/howto_notify.html" name="Hello World" />
-      <item href="howto/howto_issue.html" name="Issue tracker" />
-      <item href="howto/howto_embedded.html" name="Web configuration" />
-      <item href="howto/howto_cit.html" name="Continuous Integration" />
+      <item href="howto/howto_firststeps.html" name="First Steps" />
     </menu>
 
     <menu name="Development">
-      <item name="Downloads" href="http://github.com/openengsb/openengsb/downloads" />
-      <item name="Source" href="http://github.com/openengsb/openengsb/" />
+      <item name="Downloads" href="http://github.com/openengsb/yaste/downloads" />
+      <item name="Source" href="http://github.com/openengsb/yaste" />
       <item name="Mailing Lists" href="mailinglists.html" />
-      <item name="Presentation Material" href="presentation.html" />
-      <item name="Issues / Roadmap" href="http://issues.openengsb.org/"/>
-      <item name="Continuous Integration" href="http://build.openengsb.org/"/>
-      <item name="Artifacts" href="http://maven.openengsb.org/" />
+      <item name="Issues / Roadmap" href="http://issues.openengsb.org/jira/browse/YASTE#selectedTab=com.atlassian.jira.plugin.system.project%3Aissues-panel"/>
+      <item name="Continuous Integration" href="http://build.openengsb.org/hudson/job/YASTE/"/>
+      <item name="Artifacts" href="http://yaste.openengsb.org" />
       <item name="Development Team" href="team-list.html" />
+    </menu>
+
+	<menu name="Proposals">
+      <item href="proposals/prop_guidelines.html" name="Guidelines/Submission" />
     </menu>
 
   </body>

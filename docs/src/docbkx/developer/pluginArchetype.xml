@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+   Copyright 2010 OpenEngSB Division, Vienna University of Technology
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<chapter id="pluginArchetype" xmlns="http://docbook.org/ns/docbook">
+  <title>How to use the Maven archetype to create a YASTE plugin</title>
+  <para>
+    This section describes how a new YASTE plugin can be created using a Maven archetype.
+  </para>
+  <section>
+    <title>Using the archetype</title>
+    <para>
+      The following command is used to start the project generation:
+      <programlisting>
+        <![CDATA[
+   mvn archetype:generate -DarchetypeCatalog="http://maven.openengsb.org/archetypes/"
+        ]]>
+      </programlisting>
+      The archetype named connector-archetype should show up in the archetype list.
+      Select the archetype connector-archetype. Maven will ask if the default values for the properties shall be used. Type 'n' to overwrite the default values.
+      The following properties are needed to generate a connector project:
+      <itemizedlist>
+        <listitem>artifactId: The artifactId of the generated wrapper project for the service-engine and the service-unit.</listitem>
+        <listitem>groupId: The groupId of the generated wrapper project. Should be org.openengsb.</listitem>
+        <listitem>version: The version of the generated wrapper project.</listitem>
+        <listitem>se-artifactId: The artifactId of the service-engine.</listitem>
+        <listitem>su-artifactId: The artifactId of the service-unit.</listitem>
+        <listitem>description: The description of the tool connector.</listitem>
+        <listitem>namespace: The namespace of the tool connector.</listitem>
+        <listitem>package: The package for the source code of the service-engine.</listitem>
+        <listitem>connector-name: The connector name. This is used as prefix for Java classes so it should start with a upper-case letter.</listitem>
+        <listitem>domain-package: The package where the domain interface can be found which is implemented by this tool connector.</listitem>
+        <listitem>domain-name: The interface name of the domain interface that is implemented by this tool connector.</listitem>
+        <listitem>urn: The URN that will be used to address this tool connector.</listitem>
+      </itemizedlist>
+    </para>
+  </section>
+</chapter>
+
