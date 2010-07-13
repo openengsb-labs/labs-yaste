@@ -42,4 +42,35 @@
     </site>
   </distributionManagement>
 
+  <profiles>
+    <profile>
+      <id>docs</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>mvnSite</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>site</goal>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>mvnDeploy</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
 </project>
