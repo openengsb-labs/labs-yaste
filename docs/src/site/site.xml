@@ -55,6 +55,10 @@
       <item name="Development Team" href="team-list.html" />
     </menu>
 
+	<menu name="Proposals">
+      <item href="proposals/prop_guidelines.html" name="Guidelines/Submission" />
+    </menu>
+
   </body>
 
 </project>
