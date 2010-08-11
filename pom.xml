@@ -22,24 +22,22 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
-
     <root.basedir>${project.basedir}</root.basedir>
 
     <!-- Environment Versions -->
     <jdk.version>1.6</jdk.version>
     <mvn.version>2.1</mvn.version>
-    <jaxb.version>2.2</jaxb.version>
 
     <!-- Library Versions -->
-    
-    <!-- Plugin Version -->
+    <commons-io.version>1.4</commons-io.version>
+    <cucumber.version>0.8.3</cucumber.version>
+    <jruby.version>1.5.1</jruby.version>
+    <junit.version>4.7</junit.version>
+    <mockito.version>1.8.5</mockito.version>
+
+    <!-- Plugin Versions -->
     <docbkx.version>2.0.10</docbkx.version>
-    <jaxb.plugin.version>1.2</jaxb.plugin.version>
-    <maven.plugin.release.version>2.0-beta-9</maven.plugin.release.version>
-    <maven.plugin.surefire>2.4.3</maven.plugin.surefire>
-    <maven.plugin.assembly.version>2.2-beta-5</maven.plugin.assembly.version>
     <maven.rat.version>0.6</maven.rat.version>
-    <servicemix.jbi.maven.version>4.4-SNAPSHOT</servicemix.jbi.maven.version>
     <twdata.cli.version>1.0.4</twdata.cli.version>
   </properties>
 
@@ -55,6 +53,7 @@
 
   <modules>
     <!-- Core -->
+    <module>core/cli</module>
     <module>docs</module>
   </modules>
 
@@ -204,15 +203,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.apache.servicemix.tooling</groupId>
-        <artifactId>jbi-maven-plugin</artifactId>
-        <extensions>true</extensions>
-        <version>${servicemix.jbi.maven.version}</version>
-        <configuration>
-          <jndiPath>/karaf-root</jndiPath>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>org.twdata.maven</groupId>
         <artifactId>maven-cli-plugin</artifactId>
         <version>${twdata.cli.version}</version>
@@ -233,6 +223,14 @@
           <artifactId>maven-enforcer-plugin</artifactId>
         </plugin>
         <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+        </plugin>
+        <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>jaxws-maven-plugin</artifactId>
         </plugin>
@@ -249,66 +247,13 @@
           <artifactId>maven-surefire-report-plugin</artifactId>
         </plugin>
         <plugin>
-          <groupId>org.apache.camel</groupId>
-          <artifactId>camel-maven-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.xbean</groupId>
-          <artifactId>maven-xbean-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.servicemix.tooling</groupId>
-          <artifactId>jbi-maven-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>${maven.plugin.release.version}</version>
+          <groupId>com.agilejava.docbkx</groupId>
+          <artifactId>docbkx-maven-plugin</artifactId>
+          <version>${docbkx.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>${maven.plugin.surefire}</version>
-        </plugin>
-        <plugin>
-          <groupId>com.sun.tools.jxc.maven2</groupId>
-          <artifactId>maven-jaxb-schemagen-plugin</artifactId>
-          <version>${jaxb.plugin.version}</version>
-          <executions>
-            <execution>
-              <phase>generate-resources</phase>
-              <goals>
-                <goal>generate</goal>
-              </goals>
-            </execution>
-          </executions>
-          <dependencies>
-            <dependency>
-              <groupId>javax.xml.bind</groupId>
-              <artifactId>jaxb-api</artifactId>
-              <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>com.sun.xml.bind</groupId>
-              <artifactId>jaxb-xjc</artifactId>
-              <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>com.sun.xml.bind</groupId>
-              <artifactId>jaxb-impl</artifactId>
-              <version>${jaxb.version}</version>
-            </dependency>
-            <dependency>
-              <groupId>com.sun.xml.bind</groupId>
-              <artifactId>jaxb-xjc</artifactId>
-              <version>${jaxb.version}</version>
-            </dependency>
-          </dependencies>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>${maven.plugin.assembly.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -374,6 +319,8 @@
                 <exclude>**/.settings/**</exclude>
                 <exclude>**/.metadata/**</exclude>
 
+                <exclude>**/.codecover/**</exclude>
+
                 <exclude>**/site/docbook/empty.txt</exclude>
 
                 <!-- -? jaxb stuff -? -->
@@ -402,9 +349,36 @@
     </profile>
   </profiles>
 
-  <!--<dependencyManagement>
+  <dependencyManagement>
 
-  </dependencyManagement>-->
+    <dependencies>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jruby</groupId>
+        <artifactId>jruby-complete</artifactId>
+        <version>${jruby.version}</version>
+      </dependency>
+
+      <!-- Test Dependencies -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>${mockito.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+
+  </dependencyManagement>
 
   <pluginRepositories>
     <pluginRepository>
@@ -451,17 +425,6 @@
       <id>openengsb-snapshots</id>
       <name>OpenEngSB Snapshot Repository</name>
       <url>http://maven.openengsb.org/nexus/content/repositories/openengsb-snapshots/</url>
-    </repository>
-    <repository>
-      <id>mockns-snapshot</id>
-      <name>MockNS Snapshot Repository</name>
-      <url>http://snapshot.btmatthews.com</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
     </repository>
     <repository>
       <id>apache.snapshots</id>
