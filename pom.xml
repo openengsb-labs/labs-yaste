@@ -249,14 +249,6 @@
           <artifactId>maven-surefire-report-plugin</artifactId>
         </plugin>
         <plugin>
-          <groupId>com.agilejava.docbkx</groupId>
-          <artifactId>docbkx-maven-plugin</artifactId>
-          <version>${docbkx.version}</version>
-          <configuration>
-          <xincludeSupported>true</xincludeSupported>
-          </configuration>
-        </plugin>
-        <plugin>
           <groupId>org.apache.camel</groupId>
           <artifactId>camel-maven-plugin</artifactId>
         </plugin>

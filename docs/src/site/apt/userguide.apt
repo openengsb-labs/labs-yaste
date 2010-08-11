@@ -20,8 +20,8 @@ User Documentation
  on getting starting with the development of plugins. It is recommended for users who simply
  want to try YASTE as well as for developers who would like to program and integrate new plugins.
 
-    * {{{html/usermanual.html} Multi-HTML page documentation}}
+~~    * {{{html/usermanual.html} Multi-HTML page documentation}}
 
-    * {{{html-single/usermanual.html} Singe HTML page documentation}}
+    * {{{html/usermanual.html} Singe HTML page documentation}}
 
     * {{{pdf/usermanual.pdf} PDF documentation}}

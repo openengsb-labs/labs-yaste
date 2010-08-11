@@ -35,7 +35,7 @@
     <menu name="YASTE">
       <item href="index.html" name="Welcome" />
       <item href="about.html" name="What is YASTE?" />
-      <item href="reference/index.html" name="Userguide" />
+      <item href="userguide.html" name="Userguide" />
       <item href="faq.html" name="FAQ" />
       <item href="sponsors.html" name="Sponsors" />
     </menu>
